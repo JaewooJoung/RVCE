@@ -73,7 +73,7 @@ class ADASClient:
 - Maintained stable communication over extended periods
 - Demonstrated feasibility of cross-platform sensor data transfer
 
-[![TESTED Image](image.png)](test.mp4)
+[![TESTED Image](image.png)](test.gif)
 
 ## Deployment Instructions
 
