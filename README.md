@@ -2,7 +2,8 @@
 Proof Of Concept
 
 1. [Trial of making the communication stack with Camera to Server](./com/communication.md)
-2. Camera BOM 
+2. Camera BOM
+
 | Item No. | Component                                        | Specification      | Qty | Est. Cost (£) | Sample Image                                                                                              | Link                                                                                   | Notes                                                |
 |----------|--------------------------------------------------|---------------------|-----|----------------|-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|------------------------------------------------------|
 | 1        | Raspberry Pi 5 Model B                           | 8GB RAM             | 1   | 76.8           | <img src="https://thepihut.com/cdn/shop/files/raspberry-pi-5-raspberry-pi-40958498898115_700x.jpg?v=1695819922" alt="Raspberry Pi 5" width="100"/> | [Link](https://thepihut.com/products/raspberry-pi-5?variant=42531604955331) |                                                      |
