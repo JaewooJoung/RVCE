@@ -2,7 +2,7 @@
 Proof Of Concept
 
 1. [Trial of making the communication stack with Camera to Server](./com/communication.md)
-2. Camera BOM (this is for development)
+2. Camera BOM (this is for development, inspired by [link](https://datarootlabs.com/blog/hailo-ai-kit-raspberry-pi-5-setup-and-computer-vision-pipelines#implementing-custom-detection-tracking-pipeline))
 
 | Item No. | Component                                        | Specification      | Qty | Est. Cost (£) | Sample Image                                                                                              | Link                                                                                   | Notes                                                |
 |----------|--------------------------------------------------|---------------------|-----|----------------|-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|------------------------------------------------------|
