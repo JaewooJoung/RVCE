@@ -73,7 +73,7 @@ class ADASClient:
 - Maintained stable communication over extended periods
 - Demonstrated feasibility of cross-platform sensor data transfer
 
-[![TESTED Image](https://github.com/JaewooJoung/RVCE/edit/main/com/image.jpg)](https://github.com/JaewooJoung/RVCE/edit/main/com/test.mp4)
+[![TESTED Image](https://github.com/JaewooJoung/RVCE/edit/main/com/image.png)](https://github.com/JaewooJoung/RVCE/edit/main/com/test.mp4)
 
 ## Deployment Instructions
 
