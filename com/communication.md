@@ -77,7 +77,7 @@ class ADASClient:
 
 ## Deployment Instructions
 
-### Server Setup (Receiver)
+### Server Setup /Receiver:[server.py](server.py)
 1. Install required packages:
 ```bash
 pip install pyzmq
@@ -88,7 +88,7 @@ pip install pyzmq
 python server.py
 ```
 
-### Client Setup (Sender)
+### Client Setup /Sender:[client.py](client.py)
 1. Install required packages on Raspberry Pi:
 ```bash
 pip install pyzmq
