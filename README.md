@@ -18,3 +18,48 @@ Proof Of Concept
 | 10       | Mini HDMI Cable                                  | 1m length           | 1   | 3.8            | <img src="https://thepihut.com/cdn/shop/products/micro-hdmi-to-hdmi-cable-for-raspberry-pi-4-the-pi-hut-103596-29915930689731_700x.jpg?v=1646362088" alt="Mini HDMI Cable" width="100"/> | [Link](https://thepihut.com/products/hdmi-to-micro-hdmi-cable-2m-gold-plated?variant=40818117050563) |                                                      |
 
 Total Cost : £279.51
+
+
+architecture:
+
+```mermaid
+graph LR
+    %% Define Raspberry Pi 5 and cameras
+    rpi[Raspberry Pi 5]
+    cam_front[Front Camera]
+    cam_back[Back Camera]
+    cam_left[Left Camera]
+    cam_right[Right Camera]
+
+    %% Define NVIDIA AGX Orin
+    orin[NVIDIA AGX Orin]
+
+    %% Define Golf Cart Controls
+    brake[Brake Control]
+    gear[Gear Control]
+    steering[Steering Control]
+
+    %% Connect cameras to Raspberry Pi
+    cam_front --> rpi
+    cam_back --> rpi
+    cam_left --> rpi
+    cam_right --> rpi
+
+    %% Connect Raspberry Pi to Orin
+    rpi --> |Video Feed| orin
+
+    %% Connect Orin to Golf Cart Controls
+    orin --> brake
+    orin --> gear
+    orin --> steering
+
+    %% Add styles
+    classDef sensor fill:#a8d5ff,stroke:#333,stroke-width:2px
+    classDef processor fill:#ff9b9b,stroke:#333,stroke-width:2px
+    classDef control fill:#9fff9f,stroke:#333,stroke-width:2px
+
+    %% Apply styles
+    class cam_front,cam_back,cam_left,cam_right sensor
+    class rpi,orin processor
+    class brake,gear,steering control
+```
