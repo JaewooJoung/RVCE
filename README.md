@@ -39,10 +39,11 @@ graph LR
     switch[Ethernet Switch]
     orin[NVIDIA AGX Orin]
     
-    %% Define Golf Cart Controls
-    brake[Brake Control]
-    gear[Gear Control]
-    steering[Steering Control]
+    %% Define CAN and Controls
+    can[CAN Controller]
+    brake[Brake Controller]
+    gear[Gear Controller]
+    steering[Steering Controller]
     
     %% Connect cameras to respective RPis
     cam_front --> rpi_front
@@ -59,20 +60,25 @@ graph LR
     %% Connect Switch to Orin
     switch --> |Video Data| orin
     
-    %% Connect Orin to Golf Cart Controls
-    orin --> brake
-    orin --> gear
-    orin --> steering
+    %% Connect Orin to CAN Controller
+    orin --> |Control Commands| can
+    
+    %% Connect CAN to Controllers
+    can --> |CAN Bus| brake
+    can --> |CAN Bus| gear
+    can --> |CAN Bus| steering
     
     %% Add styles
     classDef sensor fill:#a8d5ff,stroke:#333,stroke-width:2px
     classDef processor fill:#ff9b9b,stroke:#333,stroke-width:2px
     classDef network fill:#ffd700,stroke:#333,stroke-width:2px
     classDef control fill:#9fff9f,stroke:#333,stroke-width:2px
+    classDef can fill:#ff9f9f,stroke:#333,stroke-width:2px
     
     %% Apply styles
     class cam_front,cam_back,cam_left,cam_right sensor
     class rpi_front,rpi_back,rpi_left,rpi_right,orin processor
     class switch network
     class brake,gear,steering control
+    class can can
 ```
