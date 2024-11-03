@@ -24,6 +24,10 @@ architecture:
 
 ```mermaid
 graph LR
+    %% Define Remote Control
+    remote[Remote Control Center]
+    wifi[WiFi Router]
+    
     %% Define Cameras and Raspberry Pis
     cam_front[Front Camera]
     cam_back[Back Camera]
@@ -44,6 +48,10 @@ graph LR
     brake[Brake Controller]
     gear[Gear Controller]
     steering[Steering Controller]
+    
+    %% Connect Remote to WiFi
+    remote <--> |Control Commands & Feedback| wifi
+    wifi <--> |Wireless Link| orin
     
     %% Connect cameras to respective RPis
     cam_front --> rpi_front
@@ -74,11 +82,13 @@ graph LR
     classDef network fill:#ffd700,stroke:#333,stroke-width:2px
     classDef control fill:#9fff9f,stroke:#333,stroke-width:2px
     classDef can fill:#ff9f9f,stroke:#333,stroke-width:2px
+    classDef remote fill:#c8a2c8,stroke:#333,stroke-width:2px
     
     %% Apply styles
     class cam_front,cam_back,cam_left,cam_right sensor
     class rpi_front,rpi_back,rpi_left,rpi_right,orin processor
-    class switch network
+    class switch,wifi network
     class brake,gear,steering control
     class can can
+    class remote remote
 ```
