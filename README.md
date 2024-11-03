@@ -24,42 +24,55 @@ architecture:
 
 ```mermaid
 graph LR
-    %% Define Raspberry Pi 5 and cameras
-    rpi[Raspberry Pi 5]
+    %% Define Cameras and Raspberry Pis
     cam_front[Front Camera]
     cam_back[Back Camera]
     cam_left[Left Camera]
     cam_right[Right Camera]
-
-    %% Define NVIDIA AGX Orin
+    
+    rpi_front[Raspberry Pi 5 Front]
+    rpi_back[Raspberry Pi 5 Back]
+    rpi_left[Raspberry Pi 5 Left]
+    rpi_right[Raspberry Pi 5 Right]
+    
+    %% Define Network and Processing
+    switch[Ethernet Switch]
     orin[NVIDIA AGX Orin]
-
+    
     %% Define Golf Cart Controls
     brake[Brake Control]
     gear[Gear Control]
     steering[Steering Control]
-
-    %% Connect cameras to Raspberry Pi
-    cam_front --> rpi
-    cam_back --> rpi
-    cam_left --> rpi
-    cam_right --> rpi
-
-    %% Connect Raspberry Pi to Orin
-    rpi --> |Video Feed| orin
-
+    
+    %% Connect cameras to respective RPis
+    cam_front --> rpi_front
+    cam_back --> rpi_back
+    cam_left --> rpi_left
+    cam_right --> rpi_right
+    
+    %% Connect RPis to Ethernet Switch
+    rpi_front --> |Processed Video| switch
+    rpi_back --> |Processed Video| switch
+    rpi_left --> |Processed Video| switch
+    rpi_right --> |Processed Video| switch
+    
+    %% Connect Switch to Orin
+    switch --> |Video Data| orin
+    
     %% Connect Orin to Golf Cart Controls
     orin --> brake
     orin --> gear
     orin --> steering
-
+    
     %% Add styles
     classDef sensor fill:#a8d5ff,stroke:#333,stroke-width:2px
     classDef processor fill:#ff9b9b,stroke:#333,stroke-width:2px
+    classDef network fill:#ffd700,stroke:#333,stroke-width:2px
     classDef control fill:#9fff9f,stroke:#333,stroke-width:2px
-
+    
     %% Apply styles
     class cam_front,cam_back,cam_left,cam_right sensor
-    class rpi,orin processor
+    class rpi_front,rpi_back,rpi_left,rpi_right,orin processor
+    class switch network
     class brake,gear,steering control
 ```
