@@ -92,7 +92,7 @@ graph LR
 | 11      | NVIDIA Jetson AGX Orin 64GB Development Kit     | 945-13730-0055-000         | 1   | 1,660.00           | <img src="https://developer.download.nvidia.com/embedded/images/jetsonAgxOrin/getting_started/jaodk_1024px.png" alt="NVIDIA Jetson AGX Orin 64GB Development Kit" width="100"/> | [Link](https://uk.rs-online.com/web/p/processor-development-tools/2539662?cm_mmc=UK-PLA-DS3A-_-bing-_-PLA_UK_EN_Catch+All-_-Electronic+Components,+Power+%26+Connectors-_-2539662&matchtype=e&pla-4574724306713135&cq_src=google_ads&cq_cmp=554644865&cq_term=&cq_plac=&cq_net=o&cq_plt=gp&gclid=fedbc2974bc911786985a5baae8603e6&gclsrc=3p.ds&msclkid=fedbc2974bc911786985a5baae8603e6) |                                                      |
 | 12     | Netgear ProSAFE GS108     |   Ethernet Switch    | 1   | 48.50         | <img src="https://m.media-amazon.com/images/I/71A6kxIySfL.jpg" width="100"/> | [Link](https://uk.rs-online.com/web/p/network-switches/1218128) |                                                      |
 
-Total Cost : £279.51
+Total Cost : £1998.01
 
 
 
